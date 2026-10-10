@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from .base_ctl import BaseCtl
 from ..service.user_service import UserService
 from ..utility.data_validator import DataValidator
+from django.shortcuts import render
 
 
 class LoginCtl(BaseCtl):

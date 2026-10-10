@@ -1,3 +1,4 @@
+
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from .ctl.registration_ctl import RegistrationCtl
@@ -7,6 +8,8 @@ from .ctl.user_ctl import UserCtl
 from .ctl.user_list_ctl import UserListCtl
 from .ctl.role_ctl import RoleCtl
 from .ctl.role_list_ctl import RoleListCtl
+from .ctl.college_ctl import CollegeCtl
+from .ctl.college_list_ctl import CollegeListCtl
 from .utility.html_utility import HtmlUtility
 
 
@@ -22,16 +25,16 @@ def user_logout(request):
 def action(request, page):
     if 'favicon.ico' in request.path:
         return HttpResponse(status=204)
-    ctl_name = page + "Ctl()"
-    ctl_obj = eval(ctl_name)
+    ctl_name = page[0].upper() + page[1:] + "Ctl"
+    ctl_obj = eval(ctl_name)()
     return ctl_obj.execute(request, params={'operation': '', 'id': 0})
 
 
 def action_operation_id(request, page, operation='', id=0):
     if 'favicon.ico' in request.path:
         return HttpResponse(status=204)
-    ctl_name = page + "Ctl()"
-    ctl_obj = eval(ctl_name)
+    ctl_name = page[0].upper() + page[1:] + "Ctl"
+    ctl_obj = eval(ctl_name)()
     return ctl_obj.execute(request, params={'operation': operation, 'id': id})
 
 

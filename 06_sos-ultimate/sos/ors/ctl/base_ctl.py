@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 
 class BaseCtl:
