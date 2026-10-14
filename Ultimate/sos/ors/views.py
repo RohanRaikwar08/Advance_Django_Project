@@ -9,6 +9,16 @@ from .ctl.role_ctl import RoleCtl
 from .ctl.role_list_ctl import RoleListCtl
 from .ctl.collage_ctl import CollageCtl
 from .ctl.collage_list_ctl import CollageListCtl
+from .ctl.course_ctl import CourseCtl
+from .ctl.course_list_ctl import CourseListCtl
+from .ctl.subject_list_ctl import SubjectListCtl
+from .ctl.subject_ctl import SubjectCtl
+from .ctl.faculty_ctl import FacultyCtl
+from .ctl.faculty_list_ctl import FacultyListCtl
+from .ctl.student_ctl import StudentCtl
+from .ctl.student_list_ctl import StudentListCtl
+from .ctl.marksheet_ctl import MarksheetCtl
+from .ctl.marksheet_list_ctl import MarksheetListCtl
 from .utility.html_utility import HtmlUtility
 
 

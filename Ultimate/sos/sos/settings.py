@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'sos.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'grand_master',
+        'NAME': 'babarohan',
         'USER': 'root',
         'PASSWORD': 'root',
         'HOST': '127.0.0.1',
