@@ -39,7 +39,6 @@ class UserCtl(BaseCtl):
         self.form['address'] = request.POST.get('address')
         self.form['gender'] = request.POST.get('gender')
         self.form['role_id'] = int(request.POST.get('roleId', 0))
-        print('role id ========>>>>>>>>>>>>>>>>>>', self.form['role_id'])
 
     def form_to_model(self, obj):
         obj.id = self.form['id']
